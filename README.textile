@@ -1,1 +1,56 @@
-Vim settings and script.
+h1. Vim
+
+It is recommended that you use gVim in either Windows or Linux and MacVim for Mac. Downlaod from:
+* (Windows) http://www.vim.org/download.php#pc
+* (Mac) http://code.google.com/p/macvim/downloads/list
+
+h1. Usage
+
+Clone this repo into your home directory either as .vim (linux/mac) or vimfiles (Windows). Such as:
+
+<pre><code>
+git clone git://github.com/mindmirror/vimfiles.git ~/.vim
+</pre></code>
+
+Now just copy (or symlink) the .vim/vimrc file as .vimrc (Mac/Linux) or copy as _vimrc (Windows) in your home directory. In Mac and Linux, the easiest thing to do is:
+
+<pre><code>
+ln -s ~/.vim/vimrc ~/.vimrc
+</code></pre>
+
+If you already have a custom .vimrc file, append the following lines to load everything else along with your personal hacks:
+
+<pre><code>
+source ~/.vim/vimrc        "linux
+source ~/vimfiles/vimrc    "windows
+</code></pre>
+
+h2. Help Tags
+
+At first usage of vim, type ":" while in command mode and execute:
+
+  call pathogen#helptags()
+
+This will make the plugins documentations available upon :help
+
+h2. Dependencies
+
+You will need these dependencies figured out:
+
+* Ruby (for the fuzzy finder pluin)
+* Exuberant Ctags (http://ctags.sourceforge.net/)
+* Ncurses-term (in Linux only)
+
+In Ubuntu, for example, you will have to do:
+
+<pre><code>
+apt-get install exuberant-ctags ncurses-term
+</code></pre>
+
+On Windows you have to download Ctags and add ctags.exe in your PATH.
+
+Mac OS X and most Linux distros come with Ruby already. If you're in Windows look for Luis Lavena's latest Ruby Installer (http://rubyforge.org/projects/rubyinstaller/)
+
+h2. Credits
+
+* Original project and most of the heavy lifting: @scrooloose @akitaonrails

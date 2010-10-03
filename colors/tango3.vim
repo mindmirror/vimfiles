@@ -19,7 +19,7 @@ if exists("syntax-on")
 syntax reset
 endif
 
-let colors_name = "tango2"
+let colors_name = "tango3"
 
 " =============================================================================
 " Vim >= 7.0 specific colours
@@ -38,24 +38,25 @@ endif
 " General colours
 " =============================================================================
 
-hi Normal guibg=#2E3436 guifg=#eeeeec 
+hi Normal guibg=#2E3436 guifg=#eeeeec
 hi Cursor gui=none guibg=White guifg=Black
 
-hi Folded guibg=#4D585B guibg=#d2d2d2
-" No fold column support yet 
+" hi Folded guibg=#4D585B guibg=#d2d2d2
+hi Folded guibg=Orange guibg=DarkBlue
+" No fold column support yet
 " hi FoldColumn guifg=Orange guibg=DarkBlue
 " =============================================================================
 " Syntax highlighting
 " =============================================================================
 
 hi Comment guifg=#6d7e8a ctermfg=Grey
-hi Todo term=bold guifg=#EBC450 
+hi Todo term=bold guifg=#EBC450
 hi Constant guifg=#8ae234
 hi Type guifg=#8AE234
 hi Function gui=bold guifg=#9BCF8D
 hi Statement guifg=#729FCF
 hi Identifier guifg=#AD7FA8
-hi PreProc guifg=#e9ba6e 
+hi PreProc guifg=#e9ba6e
 hi Special term=underline guifg=#5EAFE5
 
 hi Search guibg=#81ABBD

@@ -7,3 +7,6 @@
 [submodule "bundle/cocoa.vim"]
 	path = bundle/cocoa.vim
 	url = http://github.com/msanders/cocoa.vim.git
+[submodule "bundle/cocoa"]
+	path = bundle/cocoa
+	url = http://github.com/msanders/cocoa.vim.git

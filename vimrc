@@ -65,7 +65,6 @@
 " Vim UI {
     " set cursorcolumn " highlight the current column
     " set cursorline " highlight the current line
-    set hlsearch " highlight searched for phrases
     set incsearch " highlight as you type you search phrase
     set laststatus=2 " always show the status line
     set lazyredraw " do not redraw while running macros
@@ -74,8 +73,9 @@
     set listchars=tab:>-,trail:-,precedes:<,extends:>
                                 " show tabs and trailing
                                 " show preceds and extends
-    set matchtime=5 " how many tenths of a second to blink
+    "set matchtime=5 " how many tenths of a second to blink
                     " matching brackets for
+    set nohlsearch " highlight searched for phrases
     set nostartofline " leave my cursor where it was
     set novisualbell " don't blink
     set number " turn on line numbers

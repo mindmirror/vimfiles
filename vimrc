@@ -107,6 +107,7 @@
 
 " Text Formatting/Layout {
     "set completeopt= " don't use a pop up menu for completions
+    set cindent " C style indent
     set expandtab " no real tabs
     set formatoptions=rq " Automatically insert comment leader on return,
                          " and let gq comments

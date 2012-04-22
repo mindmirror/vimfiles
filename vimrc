@@ -29,6 +29,7 @@
     "             |
     "             +-- :read updates alternative file name
     syntax on " syntax highlighting on
+    set encoding=utf-8 "use utf-8 encoding
 " }
 
 " General {
@@ -156,6 +157,7 @@ if has("gui_running")
         "colorscheme tango3 " my color scheme (only works in GUI)
         set columns=120 " perfect size for me
         set guifont=Consolas:h14 " my favorite font
+        let g:Powerline_symbols = 'fancy' "powerline fancy setting
         set guioptions=ce
         "              ||
         "              |+-- use simple dialogs rather than pop-ups

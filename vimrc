@@ -8,6 +8,7 @@
     set nocompatible " explicitly get out of vi-compatible mode
     set noexrc " don't use local version of .(g)vimrc, .exrc
     set background=dark " use a dark background
+    colorscheme jellybeans "use jellybeans as default color scheme
     set cpoptions=aABceFsmq " Vim default: "aABceFs"
     "             |||||||||
     "             ||||||||+-- When joining multiple lines leave the cursor at the
@@ -152,7 +153,7 @@
 " GUI Settings {
 if has("gui_running")
     " Basics {
-        colorscheme tango3 " my color scheme (only works in GUI)
+        "colorscheme tango3 " my color scheme (only works in GUI)
         set columns=120 " perfect size for me
         set guifont=Consolas:h14 " my favorite font
         set guioptions=ce

@@ -25,3 +25,6 @@
 [submodule "bundle/jellybeans-color"]
 	path = bundle/jellybeans-color
 	url = https://github.com/nanotech/jellybeans.vim.git
+[submodule "bundle/vim-indent-guides"]
+	path = bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git

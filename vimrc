@@ -63,6 +63,8 @@
     set wildmenu " turn on command line completion wild style
     set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png
     set wildmode=list:longest " turn on wild mode huge list
+
+    au BufRead,BufNewFile *.md set filetype=markdown " turn on markdown syntax for md file
 " }
 
 " Vim UI {

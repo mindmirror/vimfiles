@@ -147,11 +147,8 @@
     noremap <S-space> <C-b>
     noremap <space> <C-f>
 
-    " Make Arrow Keys Useful Again {
-        map <down> <ESC>:bn<RETURN>
-        map <left> <ESC>:NERDTreeToggle<RETURN>
-        map <right> <ESC>:Tlist<RETURN>
-        map <up> <ESC>:bp<RETURN>
+    " Open markdown file in Marked app {
+        :nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
     " }
 " }
 

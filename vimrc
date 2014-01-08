@@ -168,5 +168,7 @@ if has("gui_running")
         set lines=70 " perfect size for me
         set mousehide " hide the mouse cursor when typing
     " }
+else
+    let g:powerline_config_overrides={"common": {"dividers": {"right": {"hard": " "}, "left": {"hard": "  "}}}}
 endif
 " }

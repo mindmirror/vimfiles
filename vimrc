@@ -1,5 +1,6 @@
 " Load Pathogen {
     filetype off " necessary on some Linux distros for pathogen to properly load bundles
+    set rtp +=~/.vim/bundle/powerline/powerline/bindings/vim
     execute pathogen#infect()
 " }
 
@@ -160,9 +161,6 @@ if has("gui_running")
         "colorscheme tango3 " my color scheme (only works in GUI)
         set columns=140 " perfect size for me
         set guifont=Consolas\ for\ Powerline:h14 " my favorite font
-        let g:airline_powerline_fonts = 1 "powerline fancy setting
-        let g:airline_symbols.paste = 'ρ'
-        let g:airline_symbols.whitespace = 'Ξ'
         set guioptions=ce
         "              ||
         "              |+-- use simple dialogs rather than pop-ups
@@ -170,9 +168,7 @@ if has("gui_running")
         set lines=70 " perfect size for me
         set mousehide " hide the mouse cursor when typing
     " }
+else
+    let g:powerline_config_overrides={"common": {"dividers": {"right": {"hard": " "}, "left": {"hard": "  "}}}}
 endif
-" }
-
-" Vim-airline Settings {
-let g:airline_theme='powerlineish'
 " }

@@ -1,7 +1,6 @@
 " Load Pathogen {
     filetype off " necessary on some Linux distros for pathogen to properly load bundles
-    call pathogen#helptags() " generate helptags
-    call pathogen#runtime_append_all_bundles() " load pathogen managed plugins
+    execute pathogen#infect()
 " }
 
 " Basics {
@@ -159,9 +158,11 @@
 if has("gui_running")
     " Basics {
         "colorscheme tango3 " my color scheme (only works in GUI)
-        set columns=120 " perfect size for me
-        set guifont=Consolas:h14 " my favorite font
-        let g:Powerline_symbols = 'fancy' "powerline fancy setting
+        set columns=140 " perfect size for me
+        set guifont=Consolas\ for\ Powerline:h14 " my favorite font
+        let g:airline_powerline_fonts = 1 "powerline fancy setting
+        let g:airline_symbols.paste = 'ρ'
+        let g:airline_symbols.whitespace = 'Ξ'
         set guioptions=ce
         "              ||
         "              |+-- use simple dialogs rather than pop-ups
@@ -170,4 +171,8 @@ if has("gui_running")
         set mousehide " hide the mouse cursor when typing
     " }
 endif
+" }
+
+" Vim-airline Settings {
+let g:airline_theme='powerlineish'
 " }

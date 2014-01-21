@@ -189,3 +189,8 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\v\.(exe|so|dll)$'
     \ }
 " }
+
+" Numbers {
+let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
+nnoremap <F3> :NumbersToggle<CR>
+"

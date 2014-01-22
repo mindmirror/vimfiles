@@ -223,3 +223,7 @@
 " Gundo {
     nnoremap <F5> :GundoToggle<CR>
 " }
+
+" Tagbar {
+    nmap <F8> :TagbarToggle<CR>
+" }

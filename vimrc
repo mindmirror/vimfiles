@@ -156,41 +156,58 @@
 " }
 
 " GUI Settings {
-if has("gui_running")
-    " Basics {
-        "colorscheme tango3 " my color scheme (only works in GUI)
-        set columns=140 " perfect size for me
-        set guifont=Consolas\ for\ Powerline:h14 " my favorite font
-        set guioptions=ce
-        "              ||
-        "              |+-- use simple dialogs rather than pop-ups
-        "              +-- use GUI tabs, not console style tabs
-        set lines=70 " perfect size for me
-        set mousehide " hide the mouse cursor when typing
-    " }
-else
-    let g:powerline_config_overrides={"common": {"dividers": {"right": {"hard": " "}, "left": {"hard": "  "}}}}
-    set ttimeoutlen=10
-    augroup FastEscape
-        autocmd!
-        au InsertEnter * set timeoutlen=0
-        au InsertLeave * set timeoutlen=1000
-    augroup END
-endif
+    if has("gui_running")
+        " Basics {
+            "colorscheme tango3 " my color scheme (only works in GUI)
+            set columns=140 " perfect size for me
+            set guifont=Consolas\ for\ Powerline:h14 " my favorite font
+            set guioptions=ce
+            "              ||
+            "              |+-- use simple dialogs rather than pop-ups
+            "              +-- use GUI tabs, not console style tabs
+            set lines=70 " perfect size for me
+            set mousehide " hide the mouse cursor when typing
+        " }
+    else
+        let g:powerline_config_overrides={"common": {"dividers": {"right": {"hard": " "}, "left": {"hard": "  "}}}}
+        set ttimeoutlen=10
+        augroup FastEscape
+            autocmd!
+            au InsertEnter * set timeoutlen=0
+            au InsertLeave * set timeoutlen=1000
+        augroup END
+    endif
 " }
 
 " Plugins
 " ctrlp.vim {
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/]\.(git|hg|svn)$',
-    \ 'file': '\v\.(exe|so|dll)$'
-    \ }
+    let g:ctrlp_map = '<c-p>'
+    let g:ctrlp_cmd = 'CtrlP'
+    let g:ctrlp_working_path_mode = 'ra'
+    let g:ctrlp_custom_ignore = {
+        \ 'dir': '\v[\/]\.(git|hg|svn)$',
+        \ 'file': '\v\.(exe|so|dll)$'
+        \ }
 " }
 
 " Numbers {
-let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
-nnoremap <F3> :NumbersToggle<CR>
-"
+    let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
+    nnoremap <F3> :NumbersToggle<CR>
+" }
+
+" Python mode {
+    let g:pymode_rope = 0 " Turn off rope, use Jedi-Vim instead
+    let g:pymode_doc = 1 " Documentation
+    let g:pymode_lint = 1 " Enable lint
+    let g:pymode_lint_checker = "pyflakes, pep8"
+    let g:pymode_lint_write = 1 " Auto check on save
+    let g:pymode_virtualenv = 1 " Support virtualenv
+    let g:pymode_breakpoint = 1 " Enable breakpoints plugin
+
+    let g:pymode_syntax = 1 " Enable syntax highlighting
+    let g:pymode_syntax_all = 1
+    let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+    let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+    let g:pymode_folding = 0 " Do not autofold code
+" }

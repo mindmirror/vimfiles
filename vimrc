@@ -147,6 +147,10 @@
     noremap <S-space> <C-b>
     noremap <space> <C-f>
 
+    " Remap leader key to ,
+    let mapleader = ","
+    noremap \ ,
+
     " Make Arrow Keys Useful Again {
         map <down> <ESC>:bn<RETURN>
         map <left> <ESC>:NERDTreeToggle<RETURN>
@@ -210,4 +214,8 @@
     let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
     let g:pymode_folding = 0 " Do not autofold code
+" }
+
+" Jedi Vim {
+    let g:jedi#rename_command = "<leader>R" " Remap rename command to <leader>R, leave <leader>r to python mode
 " }

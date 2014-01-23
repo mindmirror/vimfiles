@@ -1,7 +1,6 @@
 " Load Pathogen {
     filetype off " necessary on some Linux distros for pathogen to properly load bundles
-    call pathogen#helptags() " generate helptags
-    call pathogen#runtime_append_all_bundles() " load pathogen managed plugins
+    execute pathogen#infect()
 " }
 
 " Basics {

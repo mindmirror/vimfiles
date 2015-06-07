@@ -199,11 +199,6 @@
     nnoremap <F3> :NumbersToggle<CR>
 " }
 
-" Jedi Vim {
-    let g:jedi#rename_command = "<leader>R" " Remap rename command to <leader>R, leave <leader>r to python mode
-    let g:jedi#popup_on_dot = 0
-" }
-
 " Gundo {
     nnoremap <F5> :GundoToggle<CR>
 " }

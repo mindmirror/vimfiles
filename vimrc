@@ -157,6 +157,11 @@
         map <right> <ESC>:Tlist<RETURN>
         map <up> <ESC>:bp<RETURN>
     " }
+
+    " Bind F9 to compile
+    nnoremap <F9> :w <CR> :!gcc % -o %< <CR>
+    " Bind F10 to compile and run
+    nnoremap <F10> :w <CR> :!gcc % -o %< && %< <CR>
 " }
 
 " GUI Settings {

@@ -159,9 +159,9 @@
     " }
 
     " Bind F9 to compile
-    nnoremap <F9> :w <CR> :!gcc % -Wall -std=c99 -o %< <CR>
+    nnoremap <F9> :w <CR> :!gcc % -Wall -std=c99 -o %<.out <CR>
     " Bind F10 to compile and run
-    nnoremap <F10> :w <CR> :!gcc % -Wall -std=c99 -o %< && %< <CR>
+    nnoremap <F10> :w <CR> :!gcc % -Wall -std=c99 -o %<.out && %<.out <CR>
 " }
 
 " GUI Settings {

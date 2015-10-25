@@ -64,7 +64,9 @@
     set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png
     set wildmode=list:longest " turn on wild mode huge list
 
-    au BufRead,BufNewFile *.md set filetype=markdown " turn on markdown syntax for md file
+    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+    autocmd BufRead,BufNewFile *.md set filetype=markdown " turn on markdown syntax for md file
 " }
 
 " Vim UI {
@@ -157,6 +159,11 @@
         map <right> <ESC>:Tlist<RETURN>
         map <up> <ESC>:bp<RETURN>
     " }
+
+    " Bind F9 to compile
+    nnoremap <F9> :w <CR> :!gcc % -Wall -std=c99 -o %<.out <CR>
+    " Bind F10 to compile and run
+    nnoremap <F10> :w <CR> :!gcc % -Wall -std=c99 -o %<.out && %<.out <CR>
 " }
 
 " GUI Settings {

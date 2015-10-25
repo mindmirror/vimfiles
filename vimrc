@@ -65,6 +65,7 @@
     set wildmode=list:longest " turn on wild mode huge list
 
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 
     autocmd BufRead,BufNewFile *.md set filetype=markdown " turn on markdown syntax for md file
 " }

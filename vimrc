@@ -63,6 +63,8 @@
     set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png
     set wildmode=list:longest " turn on wild mode huge list
 
+    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
     au BufRead,BufNewFile *.md set filetype=markdown " turn on markdown syntax for md file
 " }
 
@@ -146,9 +148,14 @@
     noremap <S-space> <C-b>
     noremap <space> <C-f>
 
-    " Open markdown file in Marked app {
-        :nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
-    " }
+    " Remap leader key to ,
+    let mapleader = ","
+    noremap \ ,
+
+    " Bind F9 to compile
+    nnoremap <F9> :w <CR> :!gcc % -Wall -std=c99 -o %<.out <CR>
+    " Bind F10 to compile and run
+    nnoremap <F10> :w <CR> :!gcc % -Wall -std=c99 -o %<.out && %<.out <CR>
 " }
 
 " GUI Settings {
@@ -166,6 +173,22 @@ if has("gui_running")
         set mousehide " hide the mouse cursor when typing
     " }
 endif
+" }
+
+" Plugins
+" ctrlp.vim {
+    let g:ctrlp_map = '<c-p>'
+    let g:ctrlp_cmd = 'CtrlP'
+    let g:ctrlp_working_path_mode = 'ra'
+    let g:ctrlp_custom_ignore = {
+        \ 'dir': '\v[\/]\.(git|hg|svn)$',
+        \ 'file': '\v\.(exe|so|dll)$'
+        \ }
+" }
+
+" Numbers {
+    let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
+    nnoremap <F3> :NumbersToggle<CR>
 " }
 
 " Golang {

@@ -180,6 +180,10 @@
             set lines=70 " perfect size for me
             set mousehide " hide the mouse cursor when typing
         " }
+
+        " vim-airline {
+            let g:airline_powerline_fonts = 1
+        " }
     else
         let g:powerline_config_overrides={"common": {"dividers": {"right": {"hard": " "}, "left": {"hard": "  "}}}}
         set ttimeoutlen=10

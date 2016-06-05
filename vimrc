@@ -155,10 +155,10 @@
     noremap \ ,
 
     " Make Arrow Keys Useful Again {
-        map <down> <ESC>:bn<RETURN>
-        map <left> <ESC>:NERDTreeToggle<RETURN>
-        map <right> <ESC>:Tlist<RETURN>
-        map <up> <ESC>:bp<RETURN>
+    "   map <down> <ESC>:bn<RETURN>
+    "   map <left> <ESC>:NERDTreeToggle<RETURN>
+    "   map <right> <ESC>:Tlist<RETURN>
+    "   map <up> <ESC>:bp<RETURN>
     " }
 
     " Bind F9 to compile

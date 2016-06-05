@@ -185,7 +185,12 @@
             let g:airline_powerline_fonts = 1
         " }
     else
-        let g:powerline_config_overrides={"common": {"dividers": {"right": {"hard": " "}, "left": {"hard": "  "}}}}
+        " vim-airline {
+            let g:airline_left_sep=''
+            let g:airline_right_sep=''
+            let g:airline_theme='dark'
+        " }
+
         set ttimeoutlen=10
         augroup FastEscape
             autocmd!

@@ -251,6 +251,10 @@
     au FileType go nmap <Leader>s <Plug>(go-implements)
     au FileType go nmap <Leader>i <Plug>(go-info)
     au FileType go nmap <Leader>e <Plug>(go-rename)
+
+    let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+    let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go']  }
+    let g:go_list_type = "quickfix"
 " }
 
 " neocomplete {

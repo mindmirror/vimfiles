@@ -1,6 +1,5 @@
 " Load Pathogen {
     filetype off " necessary on some Linux distros for pathogen to properly load bundles
-    set rtp +=~/.vim/bundle/powerline/powerline/bindings/vim
     execute pathogen#infect()
 " }
 
@@ -252,4 +251,17 @@
     au FileType go nmap <Leader>s <Plug>(go-implements)
     au FileType go nmap <Leader>i <Plug>(go-info)
     au FileType go nmap <Leader>e <Plug>(go-rename)
+
+    let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+    let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go']  }
+    let g:go_list_type = "quickfix"
+" }
+
+" neocomplete {
+    " Use neocomplete.
+    let g:neocomplete#enable_at_startup = 1
+" }
+
+" Dash {
+    nmap <silent> <leader>dd <Plug>DashSearch
 " }

@@ -261,3 +261,7 @@
     " Use neocomplete.
     let g:neocomplete#enable_at_startup = 1
 " }
+
+" Dash {
+    nmap <silent> <leader>dd <Plug>DashSearch
+" }

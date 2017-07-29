@@ -1,6 +1,24 @@
-" Load Pathogen {
-    filetype off " necessary on some Linux distros for pathogen to properly load bundles
-    execute pathogen#infect()
+" Load vim-plug {
+    call plug#begin('~/.vim/plugged')
+
+    Plug 'scrooloose/nerdtree'
+    Plug 'vim-scripts/L9'
+    Plug 'nanotech/jellybeans.vim'
+    Plug 'vim-ruby/vim-ruby'
+    Plug 'kien/ctrlp.vim'
+    Plug 'tpope/vim-surround'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'myusuf3/numbers.vim'
+    Plug 'Lokaltog/vim-easymotion'
+    Plug 'sjl/gundo.vim'
+    Plug 'godlygeek/tabular'
+    Plug 'fatih/vim-go'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'tpope/vim-fugitive'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
+    call plug#end()
 " }
 
 " Basics {

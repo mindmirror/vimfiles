@@ -49,6 +49,11 @@
     set encoding=utf-8 "use utf-8 encoding
 " }
 
+" Fix clipboard issue on mac. Ref: https://github.com/neovim/neovim/issues/8631#issue-335135788
+if has('mac')
+    let g:clipboard = {'copy': {'+': 'pbcopy', '*': 'pbcopy'}, 'paste': {'+': 'pbpaste', '*': 'pbpaste'}, 'name': 'pbcopy', 'cache_enabled': 0}
+endif
+
 " General {
     filetype plugin indent on " load filetype plugins/indent settings
     "set autochdir " always switch to the current file directory
@@ -59,7 +64,7 @@
                                   " /etc/X11/x.org and ~/x.org won't clobber each
                                   " other in your swap directory
     set directory=~/.vim/swp// " directory to place swap files in
-    set clipboard+=unnamed " share windows clipboard
+    set clipboard^=unnamed,unnamedplus " share windows clipboard
     set fileformats=unix,mac,dos " support all three, in this order
     set hidden " you can change buffers without saving
     " (XXX: #VIM/tpope warns the line below could break things)
@@ -280,6 +285,3 @@
     let g:neocomplete#enable_at_startup = 1
 " }
 
-" Dash {
-    nmap <silent> <leader>dd <Plug>DashSearch
-" }

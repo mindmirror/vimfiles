@@ -194,7 +194,7 @@ endif
         " Basics {
             "colorscheme tango3 " my color scheme (only works in GUI)
             set columns=140 " perfect size for me
-            set guifont=Consolas\ for\ Powerline:h14 " my favorite font
+            set guifont=PragmataPro\ Liga:h14 " my favorite font
             set guioptions=ce
             "              ||
             "              |+-- use simple dialogs rather than pop-ups

@@ -3,3 +3,4 @@ backup/*
 swp/*
 plugged/*
 !.gitkeep
+bundle/
